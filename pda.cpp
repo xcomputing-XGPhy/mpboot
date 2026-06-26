@@ -58,6 +58,7 @@
 #include "test.h"
 #include "gss.h"
 #include "maalignment.h" //added by MA
+#include "mp_features_export.h" //catphy mode
 #include "ncbitree.h"
 #include "ecopd.h"
 #include "ecopdmtreeset.h"

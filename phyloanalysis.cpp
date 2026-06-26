@@ -42,6 +42,7 @@
 #include "model/modelcodon.h"
 #include "stoprule.h"
 
+#include "mp_features_export.h"
 #include "mtreeset.h"
 #include "mexttree.h"
 #include "model/ratemeyerhaeseler.h"
@@ -1765,6 +1766,17 @@ void runTreeReconstruction(Params &params, string &original_model, IQTree &iqtre
         	assert(iqtree.candidateTrees.size() != 0);
         	cout << "Finish initializing candidate tree set. ";
         	cout << "Number of distinct locally optimal trees: " << iqtree.candidateTrees.size() << endl;
+        	
+        	// MP Features Export Hook: Grab the generated trees in memory and export them
+        	if (params.export_mp_features) {
+        	    int num_trees_to_export = params.catphy_tree_count; // From -toppars (which feeds into popSize / catphy_tree_count)
+        	    if (num_trees_to_export > iqtree.candidateTrees.size()) {
+        	        num_trees_to_export = iqtree.candidateTrees.size();
+        	    }
+        	    vector<string> top_trees = iqtree.candidateTrees.getHighestScoringTrees(num_trees_to_export);
+        	    exportMPFeatures(params, iqtree.aln, top_trees);
+        	    return; // Halt normal execution since we only wanted to export features
+        	}
         } else {
             int nni_count = 0;
             int nni_steps = 0;
