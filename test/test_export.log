@@ -1,0 +1,300 @@
+MPBoot version 1.1.1 for Linux 64-bit built Jun 26 2026
+Copyright (c) 2016 Diep Thi Hoang, Le Sy Vinh, Tomas Flouri, Alexandros Stamatakis, Arndt von Haeseler and Bui Quang Minh.
+
+Host:    vanvan-Latitude-9520 (AVX512F, FMA3, 33 GB RAM)
+Command: ./mpboot-avx -s ../data_MSA/test/10580_0.phy.fasta -pre ../mpboot/test/test_export -catphy -numpars 100 -catphy_trees 10 --export-mp-features
+Seed:    953033 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Jun 26 22:36:09 2026
+Kernel:  AVX
+
+Reading alignment file ../data_MSA/test/10580_0.phy.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+WARNING: 31 sites contain only gaps or ambiguous chars.
+Alignment has 243 sequences with 9657 columns and 5275 patterns
+ID   Sequence  #Gap/Ambiguity
+1    taxon53   7846 (81.247%) !!!	4
+2    taxon58   9019 (93.393%) !!!	4
+3    taxon59   6354 (65.797%) !!!	4
+4    taxon56   8822 (91.353%) !!!	4
+5    taxon57   9021 (93.414%) !!!	4
+6    taxon54   8184 (84.747%) !!!	4
+7    taxon52   7845 (81.236%) !!!	4
+8    taxon55   7715 (79.890%) !!!	4
+9    taxon43   8622 (89.282%) !!!	8
+10   taxon46   8559 (88.630%) !!!	4
+11   taxon45   8553 (88.568%) !!!	4
+12   taxon44   8554 (88.578%) !!!	4
+13   taxon49   6941 (71.875%) !!!	4
+14   taxon48   7110 (73.625%) !!!	4
+15   taxon50   8794 (91.063%) !!!	4
+16   taxon229  3366 (34.856%)	4
+17   taxon230  5251 (54.375%) !!!	5
+18   taxon228  9018 (93.383%) !!!	4
+19   taxon7    8688 (89.966%) !!!	4
+20   taxon8    6978 (72.258%) !!!	4
+21   taxon6    7248 (75.054%) !!!	4
+22   taxon5    8648 (89.552%) !!!	4
+23   taxon3    8834 (91.478%) !!!	4
+24   taxon2    8574 (88.785%) !!!	4
+25   taxon1    8575 (88.796%) !!!	4
+26   taxon9    8647 (89.541%) !!!	4
+27   taxon10   8647 (89.541%) !!!	4
+28   taxon98   4930 (51.051%) !!!	4
+29   taxon73   4557 (47.189%)	4
+30   taxon199  8574 (88.785%) !!!	4
+31   taxon202  4503 (46.629%)	4
+32   taxon201  3561 (36.875%)	4
+33   taxon200  8575 (88.796%) !!!	4
+34   taxon221  5900 (61.096%) !!!	4
+35   taxon132  3417 (35.384%)	4
+36   taxon140  7388 (76.504%) !!!	4
+37   taxon131  8117 (84.053%) !!!	4
+38   taxon145  8600 (89.055%) !!!	4
+39   taxon30   3866 (40.033%)	4
+40   taxon70   8039 (83.245%) !!!	4
+41   taxon154  4760 (49.291%)	4
+42   taxon153  5893 (61.023%) !!!	4
+43   taxon47   8566 (88.702%) !!!	4
+44   taxon120  3194 (33.074%)	4
+45   taxon118  8586 (88.910%) !!!	4
+46   taxon35   5885 (60.940%) !!!	4
+47   taxon12   5012 (51.900%) !!!	4
+48   taxon14   6183 (64.026%) !!!	4
+49   taxon15   6992 (72.403%) !!!	4
+50   taxon13   6335 (65.600%) !!!	4
+51   taxon206  8574 (88.785%) !!!	4
+52   taxon122  3170 (32.826%)	4
+53   taxon121  8595 (89.003%) !!!	4
+54   taxon149  4608 (47.717%)	4
+55   taxon77   8546 (88.495%) !!!	4
+56   taxon119  3202 (33.157%)	5
+57   taxon173  3130 (32.412%)	4
+58   taxon174  5158 (53.412%) !!!	4
+59   taxon176  5939 (61.499%) !!!	4
+60   taxon177  7716 (79.901%) !!!	5
+61   taxon175  4511 (46.712%)	5
+62   taxon204  3174 (32.867%)	4
+63   taxon205  3877 (40.147%)	4
+64   taxon191  7048 (72.983%) !!!	4
+65   taxon222  5931 (61.417%) !!!	4
+66   taxon192  5119 (53.008%) !!!	4
+67   taxon139  5499 (56.943%) !!!	4
+68   taxon134  5230 (54.158%) !!!	4
+69   taxon135  4726 (48.939%)	4
+70   taxon133  5871 (60.795%) !!!	4
+71   taxon138  5390 (55.814%) !!!	4
+72   taxon136  7815 (80.926%) !!!	4
+73   taxon137  5864 (60.723%) !!!	4
+74   taxon89   7697 (79.704%) !!!	4
+75   taxon31   8463 (87.636%) !!!	4
+76   taxon32   5596 (57.948%) !!!	4
+77   taxon37   7689 (79.621%) !!!	4
+78   taxon240  5239 (54.251%) !!!	4
+79   taxon105  7742 (80.170%) !!!	4
+80   taxon104  4634 (47.986%)	5
+81   taxon108  7297 (75.562%) !!!	4
+82   taxon103  9011 (93.311%) !!!	4
+83   taxon107  3863 (40.002%)	4
+84   taxon225  4518 (46.785%)	4
+85   taxon186  8576 (88.806%) !!!	4
+86   taxon185  8574 (88.785%) !!!	4
+87   taxon71   6990 (72.383%) !!!	5
+88   taxon78   4872 (50.450%) !!!	4
+89   taxon51   6837 (70.798%) !!!	4
+90   taxon83   8575 (88.796%) !!!	4
+91   taxon82   6465 (66.946%) !!!	4
+92   taxon81   5165 (53.485%) !!!	4
+93   taxon79   5099 (52.801%) !!!	4
+94   taxon80   4630 (47.944%)	4
+95   taxon63   4546 (47.075%)	4
+96   taxon64   5877 (60.857%) !!!	4
+97   taxon235  3178 (32.909%)	4
+98   taxon236  3185 (32.981%)	4
+99   taxon231  6604 (68.386%) !!!	4
+100  taxon232  7018 (72.673%) !!!	4
+101  taxon233  3418 (35.394%)	5
+102  taxon234  3162 (32.743%)	4
+103  taxon115  3170 (32.826%)	4
+104  taxon116  3172 (32.847%)	4
+105  taxon92   9424 (97.587%) !!!	4
+106  taxon75   8203 (84.944%) !!!	4
+107  taxon76   3705 (38.366%)	4
+108  taxon68   6565 (67.982%) !!!	4
+109  taxon66   7689 (79.621%) !!!	4
+110  taxon67   7673 (79.455%) !!!	4
+111  taxon62   5831 (60.381%) !!!	4
+112  taxon61   9154 (94.791%) !!!	4
+113  taxon148  5241 (54.272%) !!!	4
+114  taxon125  6637 (68.727%) !!!	4
+115  taxon126  4614 (47.779%)	5
+116  taxon190  5905 (61.147%) !!!	4
+117  taxon243  4492 (46.515%)	4
+118  taxon219  8574 (88.785%) !!!	4
+119  taxon223  6301 (65.248%) !!!	4
+120  taxon220  8574 (88.785%) !!!	4
+121  taxon224  4573 (47.354%)	4
+122  taxon217  5893 (61.023%) !!!	4
+123  taxon218  3229 (33.437%)	5
+124  taxon42   8217 (85.089%) !!!	4
+125  taxon127  3859 (39.961%)	4
+126  taxon34   3873 (40.106%)	4
+127  taxon33   7822 (80.998%) !!!	4
+128  taxon106  8578 (88.827%) !!!	4
+129  taxon84   7819 (80.967%) !!!	5
+130  taxon85   9020 (93.404%) !!!	4
+131  taxon72   8583 (88.879%) !!!	4
+132  taxon39   7911 (81.920%) !!!	4
+133  taxon65   7987 (82.707%) !!!	4
+134  taxon60   9343 (96.748%) !!!	4
+135  taxon158  6342 (65.673%) !!!	4
+136  taxon163  3183 (32.961%)	4
+137  taxon159  3820 (39.557%)	5
+138  taxon160  4631 (47.955%)	4
+139  taxon91   5876 (60.847%) !!!	4
+140  taxon95   8577 (88.816%) !!!	4
+141  taxon94   5489 (56.840%) !!!	4
+142  taxon93   4363 (45.180%)	4
+143  taxon124  5886 (60.951%) !!!	4
+144  taxon128  3202 (33.157%)	4
+145  taxon193  4575 (47.375%)	4
+146  taxon194  6985 (72.331%) !!!	4
+147  taxon117  5137 (53.195%) !!!	4
+148  taxon146  5840 (60.474%) !!!	4
+149  taxon147  6055 (62.701%) !!!	4
+150  taxon142  3164 (32.764%)	4
+151  taxon141  3657 (37.869%)	4
+152  taxon109  3725 (38.573%)	4
+153  taxon88   7842 (81.205%) !!!	4
+154  taxon87   7839 (81.174%) !!!	4
+155  taxon86   7819 (80.967%) !!!	4
+156  taxon151  3476 (35.995%)	4
+157  taxon152  3540 (36.657%)	4
+158  taxon69   8623 (89.293%) !!!	4
+159  taxon74   6560 (67.930%) !!!	4
+160  taxon40   7057 (73.077%) !!!	4
+161  taxon195  4613 (47.768%)	4
+162  taxon196  4575 (47.375%)	4
+163  taxon168  6800 (70.415%) !!!	4
+164  taxon169  5887 (60.961%) !!!	5
+165  taxon178  3184 (32.971%)	4
+166  taxon170  4495 (46.547%)	4
+167  taxon242  6683 (69.204%) !!!	4
+168  taxon241  7793 (80.698%) !!!	4
+169  taxon188  9339 (96.707%) !!!	4
+170  taxon187  8574 (88.785%) !!!	4
+171  taxon189  4405 (45.615%)	5
+172  taxon164  4483 (46.422%)	4
+173  taxon165  3568 (36.947%)	4
+174  taxon166  3702 (38.335%)	4
+175  taxon167  5899 (61.085%) !!!	4
+176  taxon184  4493 (46.526%)	4
+177  taxon183  3363 (34.824%)	4
+178  taxon180  3279 (33.955%)	4
+179  taxon112  4998 (51.755%) !!!	4
+180  taxon114  3867 (40.043%)	4
+181  taxon113  8574 (88.785%) !!!	4
+182  taxon123  3300 (34.172%)	4
+183  taxon155  3460 (35.829%)	4
+184  taxon100  4605 (47.686%)	4
+185  taxon101  5964 (61.758%) !!!	4
+186  taxon24   9300 (96.303%) !!!	4
+187  taxon26   8410 (87.087%) !!!	4
+188  taxon27   9023 (93.435%) !!!	4
+189  taxon19   9300 (96.303%) !!!	4
+190  taxon23   9023 (93.435%) !!!	4
+191  taxon28   8619 (89.251%) !!!	4
+192  taxon25   5192 (53.764%) !!!	4
+193  taxon29   7733 (80.077%) !!!	4
+194  taxon156  3417 (35.384%)	5
+195  taxon157  3448 (35.705%)	5
+196  taxon227  8752 (90.629%) !!!	5
+197  taxon226  5328 (55.172%) !!!	4
+198  taxon110  3684 (38.148%)	4
+199  taxon111  4970 (51.465%) !!!	4
+200  taxon130  3134 (32.453%)	4
+201  taxon150  8619 (89.251%) !!!	4
+202  taxon197  3120 (32.308%)	4
+203  taxon198  3845 (39.816%)	4
+204  taxon4    5026 (52.045%) !!!	4
+205  taxon144  5160 (53.433%) !!!	4
+206  taxon143  4301 (44.538%)	4
+207  taxon162  3160 (32.722%)	4
+208  taxon161  4571 (47.334%)	4
+209  taxon203  3155 (32.671%)	4
+210  taxon216  6607 (68.417%) !!!	4
+211  taxon99   4412 (45.687%)	4
+212  taxon171  5283 (54.706%) !!!	4
+213  taxon17   8179 (84.695%) !!!	4
+214  taxon22   4893 (50.668%) !!!	4
+215  taxon20   4920 (50.947%) !!!	4
+216  taxon18   7917 (81.982%) !!!	4
+217  taxon21   9049 (93.704%) !!!	4
+218  taxon96   8641 (89.479%) !!!	4
+219  taxon38   8460 (87.605%) !!!	4
+220  taxon97   8664 (89.717%) !!!	4
+221  taxon215  6821 (70.633%) !!!	4
+222  taxon214  5909 (61.189%) !!!	4
+223  taxon207  6584 (68.179%) !!!	4
+224  taxon208  3882 (40.199%)	4
+225  taxon238  6315 (65.393%) !!!	4
+226  taxon237  6249 (64.710%) !!!	4
+227  taxon239  5974 (61.862%) !!!	4
+228  taxon11   6334 (65.590%) !!!	4
+229  taxon181  3200 (33.137%)	4
+230  taxon182  5910 (61.199%) !!!	4
+231  taxon179  3230 (33.447%)	4
+232  taxon213  8574 (88.785%) !!!	4
+233  taxon209  5896 (61.054%) !!!	4
+234  taxon212  3163 (32.753%)	4
+235  taxon211  5198 (53.826%) !!!	4
+236  taxon210  3154 (32.660%)	5
+237  taxon129  5204 (53.888%) !!!	4
+238  taxon36   3113 (32.236%)	4
+239  taxon90   8012 (82.966%) !!!	4
+240  taxon16   6720 (69.587%) !!!	4
+241  taxon172  2870 (29.719%)	4
+242  taxon41   4976 (51.527%) !!!	5
+243  taxon102  3827 (39.629%)	4
+WARNING: 164 sequences contain more than 50% gaps/ambiguity
+**** TOTAL     1482286 (63.166%)
+
+Computing random stepwise addition parsimony tree for evaluating patterns...
+Time for random stepwise addition parsimony tree construction: 0.086 seconds
+Parsimony score: 11603
+Reordering patterns in alignment by decreasing order of pattern parsimony... 0.012 seconds
+NOTE: 1 identical sequences will be ignored during tree search
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.077 seconds
+
+NOTE: 223.515 MB RAM is required!
+Current best tree score: 11548
+
+Generating 99 parsimony trees... (0 duplicated parsimony trees)
+CPU time: 6
+Finish initializing candidate tree set. Number of distinct locally optimal trees: 100
+Starting MP Features Export Module using 10 candidate trees...
+Successfully parsed 10 candidate trees for parsimony computation.
+Computing parsimony scores for 10 trees...
+Cost matrix satisfies triangular inenquality
+Cost matrix satisfies triangular inenquality
+Cost matrix satisfies triangular inenquality
+Cost matrix satisfies triangular inenquality
+Cost matrix satisfies triangular inenquality
+  Processed 5/10 trees
+Cost matrix satisfies triangular inenquality
+Cost matrix satisfies triangular inenquality
+Cost matrix satisfies triangular inenquality
+Cost matrix satisfies triangular inenquality
+Cost matrix satisfies triangular inenquality
+  Processed 10/10 trees
+Parsimony computation complete.
+  Tree scores range: [11526, 11529]
+JSON output written to ../mpboot/test/test_export.mp_features.json
+Successfully exported MP features to ../mpboot/test/test_export.mp_features.json
+
+Analysis results written to: 
+  MPBoot report:                 ../mpboot/test/test_export.mpboot
+  Maximum-parsimony  tree:       ../mpboot/test/test_export.treefile
+  Screen log file:               ../mpboot/test/test_export.log
+
+Date and Time: Fri Jun 26 22:36:17 2026

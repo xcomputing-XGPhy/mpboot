@@ -29,7 +29,7 @@
 #
 
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.21)
 
 project(mpboot)
 add_definitions(-DIQ_TREE)
@@ -39,6 +39,10 @@ set (iqtree_VERSION_MINOR 1)
 set (iqtree_VERSION_PATCH 1)
 
 set(BUILD_SHARED_LIBS OFF)
+
+if (NOT IQTREE_FLAGS)
+	set(IQTREE_FLAGS "sse")
+endif()
 
 message("IQ-TREE flags : ${IQTREE_FLAGS}")
 
@@ -356,6 +360,7 @@ iqtree.cpp
 maalignment.cpp
 matree.cpp
 mexttree.cpp
+mp_features_export.cpp
 mpdablock.cpp
 msetsblock.cpp
 msplitsblock.cpp
@@ -402,6 +407,7 @@ sprparsimony.cpp
 test.cpp
 )
 
+
 ##################################################################
 # setup linking flags
 ##################################################################
@@ -428,7 +434,21 @@ if (IQTREE_FLAGS MATCHES "omp")
 	endif()
 endif()
 
-target_link_libraries(mpboot pll ncl whtest zlibstatic sprng vectorclass model ${PLATFORM_LIB} ${THREAD_LIB})	
+target_link_libraries(mpboot pll ncl whtest zlibstatic sprng vectorclass model ${PLATFORM_LIB} ${THREAD_LIB})
+
+# Extract mpboot sources to build test without refactoring the main list
+get_target_property(MPBOOT_SOURCES mpboot SOURCES)
+list(REMOVE_ITEM MPBOOT_SOURCES pda.cpp) # remove main()
+# test_count_informative
+add_executable(test_count_informative EXCLUDE_FROM_ALL test_count_informative.cpp ${MPBOOT_SOURCES})
+target_link_libraries(test_count_informative pll ncl whtest zlibstatic sprng vectorclass model ${PLATFORM_LIB} ${THREAD_LIB})
+# test_load_trees
+add_executable(test_load_trees EXCLUDE_FROM_ALL test_load_trees.cpp ${MPBOOT_SOURCES})
+target_link_libraries(test_load_trees pll ncl whtest zlibstatic sprng vectorclass model ${PLATFORM_LIB} ${THREAD_LIB})
+# test_compute_parsimony
+add_executable(test_compute_parsimony EXCLUDE_FROM_ALL test_compute_parsimony.cpp ${MPBOOT_SOURCES})
+target_link_libraries(test_compute_parsimony pll ncl whtest zlibstatic sprng vectorclass model ${PLATFORM_LIB} ${THREAD_LIB})
+
 
 ##################################################################
 # setup the executable name 
