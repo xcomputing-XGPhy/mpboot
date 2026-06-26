@@ -111,6 +111,11 @@ public:
 
 	void printPatternScore();
 	UINT findMstScore(int ptn); // find minimum spanning tree score of a given pattern
+    
+    /**
+     * Get pattern parsimony score
+     */
+    BootValTypePars getPatternPars(int ptn) const { return _pattern_pars[ptn]; }
 
     /**************************************************************************
      * Data
