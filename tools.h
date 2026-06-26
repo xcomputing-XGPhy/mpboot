@@ -587,6 +587,18 @@ struct Params {
     char *out_prefix;
 
     /**
+            CatPhy mode: run many final MPBoot tree searches in one process 
+     */
+    bool catphy_mode;
+    int catphy_tree_count;
+
+    /**
+            MP features export mode: export parsimony computation data to JSON
+            for machine learning-based phylogenetic difficulty prediction.
+     */
+    bool export_mp_features;
+
+    /**
             alignment file name
      */
     char *aln_file;

@@ -748,6 +748,14 @@ void parseArg(int argc, char *argv[], Params &params) {
     params.write_best_trees = false;
     params.iteration_multiple = 1;
     params.initPerStrength = 0.5;
+
+	//CatPhy mode defaults
+	params.catphy_mode = false;
+    params.catphy_tree_count = 20;
+
+	// MP features export mode defaults
+	params.export_mp_features = false;
+
 #ifdef USING_PLL
     params.pll = true;
 #else
@@ -893,6 +901,24 @@ void parseArg(int argc, char *argv[], Params &params) {
 				if (cnt >= argc)
 					throw "Use -pre <output_prefix>";
 				params.out_prefix = argv[cnt];
+				continue;
+			}
+			if (strcmp(argv[cnt], "-catphy") == 0)
+			{
+				params.catphy_mode = true;
+				continue;
+			}
+			if (strcmp(argv[cnt], "-catphy_trees") == 0)
+			{
+				cnt++;
+				if (cnt >= argc)
+					throw "Use -catphy_trees <num_trees>";
+				params.catphy_tree_count = convert_int(argv[cnt]);
+				continue;
+			}
+			if (strcmp(argv[cnt], "--export-mp-features") == 0)
+			{
+				params.export_mp_features = true;
 				continue;
 			}
 			if (strcmp(argv[cnt], "-pp") == 0) {
@@ -3016,6 +3042,10 @@ void usage_mpboot(char* argv[], bool full_command) {
             << "  <treefile>           Initial tree for tree reconstruction (default: MP)" << endl
             << "  -pre <PREFIX>        Using <PREFIX> for output files (default: alignment name)" << endl
             << "  -seed <number>       Random seed number, normally used for debugging purpose" << endl
+            << "  -catphy              Enable CatPhy mode for multiple final tree searches in one process" << endl
+            << "  -catphy_trees <N>    Number of final trees for CatPhy mode or MP feature export (default: 20)" << endl
+            << "  --export-mp-features Export parsimony feature data to JSON (requires -catphy, -s, -pre)" << endl
+            << "                       Generates <PREFIX>.mp_features.json for K MP trees" << endl
             << "  -v, -vv, -vvv        Verbose mode, printing more messages to screen" << endl
 
 			<< endl << "MPBOOT - MAXIMUM PARSIMONY BOOTSTRAP APPROXIMATION:" << endl
