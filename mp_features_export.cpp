@@ -73,7 +73,23 @@ int exportMPFeatures(Params &params, Alignment *aln, const vector<string> &tree_
     MPFeaturesData data;
     computeParsimonyData(trees, aln, data);
     
-    // Determine output file path
+    // Write out the candidate trees to a .treefile so Python can compute topology features
+    string treefile_path = string(params.out_prefix) + ".mp_features.treefile";
+    ofstream tree_out(treefile_path.c_str());
+    if (tree_out.is_open()) {
+        // Add a standard Newick comment tag at the top of the file so users 
+        // quickly know how many trees are inside without counting lines.
+        tree_out << "[ " << tree_strings.size() << " candidate parsimony trees exported by MPBoot ]" << endl;
+        
+        for (const string &str : tree_strings) {
+            tree_out << str << endl;
+        }
+        tree_out.close();
+    } else {
+        cerr << "ERROR: Failed to write trees to " << treefile_path << endl;
+    }
+    
+    // Determine JSON output file path
     string output_path = string(params.out_prefix) + ".mp_features.json";
     
     // Serialize to JSON
