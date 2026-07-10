@@ -799,6 +799,7 @@ void Alignment::buildStateMap(char *map, SeqType seq_type) {
         map[(unsigned char)'Y'] = 2+8+3; // C or T, Pyrimidine
         map[(unsigned char)'N'] = STATE_UNKNOWN;
         map[(unsigned char)'X'] = STATE_UNKNOWN;
+        map[(unsigned char)'*'] = STATE_UNKNOWN; // stop codon
         map[(unsigned char)'W'] = 1+8+3; // A or T, Weak
         map[(unsigned char)'S'] = 2+4+3; // G or C, Strong
         map[(unsigned char)'M'] = 1+2+3; // A or C, Amino
