@@ -9,6 +9,7 @@
 #include "alignment.h"
 #include "parstree.h"
 #include "tools.h"
+#include "timeutil.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -71,7 +72,9 @@ int exportMPFeatures(Params &params, Alignment *aln, const vector<string> &tree_
     
     // Create data structure and compute parsimony
     MPFeaturesData data;
+    double start_time = getRealTime();
     computeParsimonyData(trees, aln, data);
+    cout << "Parsimony computation completed in " << (getRealTime() - start_time) << " seconds." << endl;
     
     // Write out the candidate trees to a .treefile so Python can compute topology features
     string treefile_path = string(params.out_prefix) + ".mp_features.treefile";
