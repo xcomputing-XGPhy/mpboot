@@ -817,6 +817,7 @@ void Alignment::buildStateMap(char *map, SeqType seq_type) {
 //		map[(unsigned char)'Z'] = 32+64+19; // Q or E
         map[(unsigned char)'B'] = 20; // N or D
         map[(unsigned char)'Z'] = 21; // Q or E
+        map[(unsigned char)'*'] = STATE_UNKNOWN; // stop codon
         return;
     case SEQ_MULTISTATE:
         for (int i = 0; i <= STATE_UNKNOWN; i++)
@@ -1349,7 +1350,7 @@ int Alignment::readFasta(char *filename, char *sequence_type) {
         if (sequences.empty()) throw "First line must begin with '>' to define sequence name";
         for (string::iterator it = line.begin(); it != line.end(); it++) {
             if ((*it) <= ' ') continue;
-            if (isalnum(*it) || (*it) == '-' || (*it) == '?'|| (*it) == '.')
+            if (isalnum(*it) || (*it) == '-' || (*it) == '?'|| (*it) == '.' || (*it) == '*')
                 sequences.back().append(1, toupper(*it));
             else {
                 err_str << "Unrecognized character " << *it << " on line " << line_num;
